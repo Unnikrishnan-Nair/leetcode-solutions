@@ -23,20 +23,29 @@ import java.util.List;
  */
 public class LeetCodeProblem_1119 {
 	
+	/**
+	 * 
+	 * @param input
+	 * @return
+	 */
 	public String removeVowels(String input) {
-		
 		List<Character> vowels = Arrays.asList('a','e','i','o','u');
-		
 		StringBuffer outputBuffer = new StringBuffer();
-
 		char[] charArray = input.toCharArray(); 
-		
 		for(int i=0; i < charArray.length; i++) {
 			if(!vowels.contains(charArray[i])) {
 				outputBuffer.append(charArray[i]);
 			}
 		}
 		return outputBuffer.toString();     
+	}
+	
+	public String removeVowels1(String input) {
+		return input.replaceAll("[aeiou]", "");
+	}
+	
+	public String removeVowels2(String input) {
+		
 	}
 
 }
