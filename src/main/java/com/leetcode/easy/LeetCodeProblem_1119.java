@@ -44,8 +44,4 @@ public class LeetCodeProblem_1119 {
 		return input.replaceAll("[aeiou]", "");
 	}
 	
-	public String removeVowels2(String input) {
-		
-	}
-
 }
