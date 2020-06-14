@@ -11,7 +11,7 @@ public class TestLeetCodeProblem_441 {
 	private static final Logger logger = LoggerFactory.getLogger(TestLeetCodeProblem_1119.class);
 
 	@Test
-	public void testKidsWithCandies() {
+	public void testNumberOfJewelsInStones() {
 		
 		LeetCodeProblem_441 instance = new LeetCodeProblem_441();
 		
