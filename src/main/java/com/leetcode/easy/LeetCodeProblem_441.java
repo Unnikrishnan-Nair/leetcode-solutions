@@ -1,5 +1,8 @@
 package com.leetcode.easy;
 
+import java.util.Set;
+import java.util.stream.Collectors;
+
 /**
  * 
  * You're given strings J representing the types of stones that are jewels, and
@@ -27,11 +30,10 @@ package com.leetcode.easy;
 
 public class LeetCodeProblem_441 {
 
-	
 	/**
-	 * Brute Force 
+	 * Brute Force
 	 * 
- 	 * @param jewels
+	 * @param jewels
 	 * @param stones
 	 * @return
 	 */
@@ -42,6 +44,56 @@ public class LeetCodeProblem_441 {
 				if (jewels.charAt(j) == stones.charAt(i)) {
 					result++;
 				}
+			}
+		}
+		return result;
+	}
+
+	/**
+	 * 
+	 * @param J
+	 * @param S
+	 * @return
+	 */
+	public int numJewelsInStones1(String J, String S) {
+		int result = 0;
+		for (int i = 0; i < S.toCharArray().length; i++) {
+			if (J.contains(S.charAt(i) + "")) {
+				result++;
+			}
+		}
+		return result;
+	}
+
+	/**
+	 * 
+	 * @param J
+	 * @param S
+	 * @return
+	 */
+	public int numJewelsInStones2(String J, String S) {
+		int result = 0;
+		for (int i = 0; i < S.toCharArray().length; i++) {
+			int index = J.indexOf(S.charAt(i));
+			if (index >= 0) {
+				result++;
+			}
+		}
+		return result;
+	}
+
+	/**
+	 * 
+	 * @param J
+	 * @param S
+	 * @return
+	 */
+	public int numJewelsInStones3(String J, String S) {
+		Set<Character> jewelSet = J.chars().mapToObj(val -> (char) val).collect(Collectors.toSet());
+		int result = 0;
+		for (int i = 0; i < S.toCharArray().length; i++) {
+			if (jewelSet.contains(S.charAt(i))) {
+				result++;
 			}
 		}
 		return result;

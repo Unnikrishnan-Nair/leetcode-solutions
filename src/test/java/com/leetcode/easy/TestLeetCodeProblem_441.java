@@ -28,5 +28,63 @@ public class TestLeetCodeProblem_441 {
 		Assertions.assertEquals(0, result);
 		
 	}
+	
+	@Test
+	public void testNumberOfJewelsInStones1() {
+		
+		LeetCodeProblem_441 instance = new LeetCodeProblem_441();
+		
+		String jewels = "aA";
+		String stones = "aAAbbbb";
+		int result = instance.numJewelsInStones1(jewels, stones);
+		
+		Assertions.assertEquals(3, result);
+		
+		jewels = "z";
+		stones = "ZZ";
+		result = instance.numJewelsInStones(jewels, stones);
+		
+		Assertions.assertEquals(0, result);
+		
+	}
+	
+	
+	@Test
+	public void testNumberOfJewelsInStones2() {
+		
+		LeetCodeProblem_441 instance = new LeetCodeProblem_441();
+		
+		String jewels = "aA";
+		String stones = "aAAbbbb";
+		int result = instance.numJewelsInStones2(jewels, stones);
+		
+		Assertions.assertEquals(3, result);
+		
+		jewels = "z";
+		stones = "ZZ";
+		result = instance.numJewelsInStones(jewels, stones);
+		
+		Assertions.assertEquals(0, result);
+		
+	}
+	
+	@Test
+	public void testNumberOfJewelsInStones3() {
+		
+		LeetCodeProblem_441 instance = new LeetCodeProblem_441();
+		
+		String jewels = "aA";
+		String stones = "aAAbbbb";
+		int result = instance.numJewelsInStones2(jewels, stones);
+		
+		Assertions.assertEquals(3, result);
+		
+		jewels = "z";
+		stones = "ZZ";
+		result = instance.numJewelsInStones(jewels, stones);
+		
+		Assertions.assertEquals(0, result);
+		
+	}
 
 }
