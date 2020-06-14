@@ -55,10 +55,10 @@ public class LeetCodeProblem_441 {
 	 * @param S
 	 * @return
 	 */
-	public int numJewelsInStones1(String J, String S) {
+	public int numJewelsInStones1(String jewels, String stones) {
 		int result = 0;
-		for (int i = 0; i < S.toCharArray().length; i++) {
-			if (J.contains(S.charAt(i) + "")) {
+		for (int i = 0; i < stones.toCharArray().length; i++) {
+			if (jewels.contains(stones.charAt(i) + "")) {
 				result++;
 			}
 		}
@@ -71,10 +71,10 @@ public class LeetCodeProblem_441 {
 	 * @param S
 	 * @return
 	 */
-	public int numJewelsInStones2(String J, String S) {
+	public int numJewelsInStones2(String jewels, String stones) {
 		int result = 0;
-		for (int i = 0; i < S.toCharArray().length; i++) {
-			int index = J.indexOf(S.charAt(i));
+		for (int i = 0; i < stones.toCharArray().length; i++) {
+			int index = jewels.indexOf(stones.charAt(i));
 			if (index >= 0) {
 				result++;
 			}
@@ -88,11 +88,11 @@ public class LeetCodeProblem_441 {
 	 * @param S
 	 * @return
 	 */
-	public int numJewelsInStones3(String J, String S) {
-		Set<Character> jewelSet = J.chars().mapToObj(val -> (char) val).collect(Collectors.toSet());
+	public int numJewelsInStones3(String jewels, String stones) {
+		Set<Character> jewelSet = jewels.chars().mapToObj(val -> (char) val).collect(Collectors.toSet());
 		int result = 0;
-		for (int i = 0; i < S.toCharArray().length; i++) {
-			if (jewelSet.contains(S.charAt(i))) {
+		for (int i = 0; i < stones.toCharArray().length; i++) {
+			if (jewelSet.contains(stones.charAt(i))) {
 				result++;
 			}
 		}
