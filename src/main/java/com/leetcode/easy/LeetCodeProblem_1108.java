@@ -22,9 +22,13 @@ package com.leetcode.easy;
  *
  */
 public class LeetCodeProblem_1108 {
-	
+
 	public String defangIPaddr(String address) {
-		return address.replaceAll("\\.", "[.]");
+		String output = null;
+		if (address != null) {
+			output = address.replaceAll("\\.", "[.]");
+		}
+		return output;
 	}
 
 }

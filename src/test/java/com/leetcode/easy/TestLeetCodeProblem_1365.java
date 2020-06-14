@@ -1,37 +1,43 @@
 package com.leetcode.easy;
 
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.junit.jupiter.api.TestInstance;
+import org.junit.jupiter.api.TestInstance.Lifecycle;
 
+@TestInstance(Lifecycle.PER_CLASS)
 public class TestLeetCodeProblem_1365 {
 
-	private static final Logger logger = LoggerFactory.getLogger(TestLeetCodeProblem_1119.class);
+	private LeetCodeProblem_1365 instance;
+
+	@BeforeAll
+	public void init() {
+		instance = new LeetCodeProblem_1365();
+	}
 
 	@Test
-	public void testKidsWithCandies() {
-
-		LeetCodeProblem_1365 instance = new LeetCodeProblem_1365();
-
+	public void testKidsWithCandies_case1() {
 		int[] nums = { 8, 1, 2, 2, 3 };
 		int[] solution = { 4, 0, 1, 1, 3 };
 		int[] result = instance.smallerNumbersThanCurrent(nums);
-
 		Assertions.assertArrayEquals(solution, result, "Failed the test case");
+	}
 
-		int[] nums1 = { 6, 5, 4, 8 };
-		int[] solution1 = { 2, 1, 0, 3 };
-		result = instance.smallerNumbersThanCurrent(nums1);
+	@Test
+	public void testKidsWithCandies_case2() {
+		int[] nums = { 6, 5, 4, 8 };
+		int[] solution = { 2, 1, 0, 3 };
+		int[] result = instance.smallerNumbersThanCurrent(nums);
+		Assertions.assertArrayEquals(solution, result, "Failed the test case");
+	}
 
-		Assertions.assertArrayEquals(solution1, result, "Failed the test case");
-
-		int[] nums2 = { 7, 7, 7, 7 };
-		int[] solution2 = { 0, 0, 0, 0 };
-		result = instance.smallerNumbersThanCurrent(nums2);
-
-		Assertions.assertArrayEquals(solution2, result, "Failed the test case");
-
+	@Test
+	public void testKidsWithCandies_case3() {
+		int[] nums = { 7, 7, 7, 7 };
+		int[] solution = { 0, 0, 0, 0 };
+		int[] result = instance.smallerNumbersThanCurrent(nums);
+		Assertions.assertArrayEquals(solution, result, "Failed the test case");
 	}
 
 }
