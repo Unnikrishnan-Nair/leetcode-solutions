@@ -29,17 +29,17 @@ import java.util.stream.IntStream;
  */
 public class LeetCodeProblem_977 {
 
-	public int[] sortedSquares(int[] inputArray) {
-		return IntStream.of(inputArray).boxed().map(val -> val * val).sorted().mapToInt(i -> i).toArray();
-	}
+    public int[] sortedSquares(int[] inputArray) {
+        return IntStream.of(inputArray).boxed().map(val -> val * val).sorted().mapToInt(i -> i).toArray();
+    }
 
-	public int[] sortedSquares1(int[] inputArray) {
-		int[] result = new int[inputArray.length];
-		for (int i = 0; i < inputArray.length; i++) {
-			result[i] = inputArray[i] * inputArray[i];
-		}
-		Arrays.sort(result);
-		return result;
-	}
+    public int[] sortedSquares1(int[] inputArray) {
+        int[] result = new int[inputArray.length];
+        for (int i = 0; i < inputArray.length; i++) {
+            result[i] = inputArray[i] * inputArray[i];
+        }
+        Arrays.sort(result);
+        return result;
+    }
 
 }
