@@ -8,6 +8,7 @@ package com.leetcode.sorting.problems;
 public class SelectionSort {
 	
 	/**
+	 * Iterative Solution
 	 * 
 	 * @param array
 	 */
@@ -26,5 +27,27 @@ public class SelectionSort {
 			}
 		}
 	}
+	
+	
+	public void performSort1(int[] array, int n) {
+		
+		if(n < 1) {
+			return;
+		}
+		performSort1(array,n-1);
+		int index = n-1;
+		
+		for(int j=n; j< array.length; j++) {
+			if(array[j] < array[index]) {
+				index = j;
+			}
+		}
+		if(array[index] < array[n-1]) {
+			int temp = array[index];
+			array[index] = array[n-1];
+			array[n-1] = temp;
+		}
+	}
+	
 	
 }
