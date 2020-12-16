@@ -18,5 +18,20 @@ public class InsertionSort {
             }
         }
     }
+    
+    public void performSort1(int[] array, int n) {
+    	if(n <= 1) {
+    		return;
+    	}
+    	performSort1(array, n-1);
+    	int key = array[n-1];
+    	int j = n-2;
+    	while(j >=0 && array[j] > key) {
+    		int temp = array[j];
+    		array[j] = array[j+1];
+    		array[j+1] = temp;
+    		j--;
+    	}
+    }
 
 }

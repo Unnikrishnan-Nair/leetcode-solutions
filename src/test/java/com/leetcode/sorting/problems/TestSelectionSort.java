@@ -63,6 +63,14 @@ public class TestSelectionSort {
 		instance.performSort1(inputArray,inputArray.length-1);
 		Assertions.assertArrayEquals(solution, inputArray);
 	}
+	
+	@Test
+	public void testPerformSort1_case4() {
+		int[] inputArray = { 6, 2, 7, 3, 9,1,4,8 };
+		int[] solution = { 1,2,3,4,6,7,8,9 };
+		instance.performSort1(inputArray,inputArray.length);
+		Assertions.assertArrayEquals(solution, inputArray);
+	}
 
 
 }

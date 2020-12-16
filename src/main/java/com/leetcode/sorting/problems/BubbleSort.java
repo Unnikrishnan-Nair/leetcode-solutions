@@ -27,6 +27,7 @@ public class BubbleSort {
 		boolean isSorted = true;
 		int length = array.length - 1;
 		for (int i = 0; i < array.length - 1; i++) {
+			isSorted = true;
 			for (int j = 0; j < length; j++) {
 				if (array[j] > array[j + 1]) {
 					int temp = array[j];
@@ -47,7 +48,7 @@ public class BubbleSort {
 	 * @param array
 	 */
 	public void performSort2(int[] array, int length) {
-		if (length < 1) {
+		if (length <= 1) {
 			return;
 		}
 		for (int j = 0; j < length; j++) {
